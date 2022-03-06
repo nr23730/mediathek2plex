@@ -1,0 +1,12 @@
+version: '3'
+services:
+  mediathek2plex:
+    build: .
+    restart: always
+    volumes:
+      - "${TARGET:-./output}:/output"
+    environment:
+      - QUERY=${QUERY:-}
+      - XPATH=${XPATH:-}
+      - INTERVAL=${INTERVAL:-3600}
+      - OUTPUT=/output
