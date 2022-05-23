@@ -1,4 +1,4 @@
-FROM alpine:3.15.4
+FROM alpine:3.16.0
 
 RUN apk add --no-cache bash curl grep coreutils xmlstarlet
 COPY ./pull.sh /pull.sh
